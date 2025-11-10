@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DefourPro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                        <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="100%" style="stop-color:#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>DefourPro</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="gallery.html" class="active">Gallery</a>
+                    <a href="docs.html">Docs</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Log In</a>
+                    <a href="dashboard.html" class="btn-primary">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Community Gallery</h1>
+            <p>Explore stunning AI-generated videos created by our community</p>
+            
+            <!-- Filters -->
+            <div class="gallery-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="featured">Featured</button>
+                    <button class="filter-btn" data-filter="trending">Trending</button>
+                    <button class="filter-btn" data-filter="recent">Recent</button>
+                </div>
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="abstract">Abstract</option>
+                        <option value="nature">Nature</option>
+                        <option value="scifi">Sci-Fi</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="architecture">Architecture</option>
+                        <option value="portrait">Portrait</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Sort By</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="recent">Most Recent</option>
+                        <option value="views">Most Viewed</option>
+                        <option value="likes">Most Liked</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="abstract">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/6366f1/ffffff?text=Cyberpunk+Dreams" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    1.2k
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    8.5k
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge-featured">Featured</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Cyberpunk Dreams</h3>
+                        <p class="gallery-author">by <a href="#">@neural_artist</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Cyberpunk</span>
+                            <span class="tag">3D Animation</span>
+                            <span class="tag">Neon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="nature">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/10b981/ffffff?text=Oceanic+Serenity" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    856
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    5.2k
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Oceanic Serenity</h3>
+                        <p class="gallery-author">by <a href="#">@wave_creator</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Nature</span>
+                            <span class="tag">Ocean</span>
+                            <span class="tag">Relaxing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="scifi">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Space+Odyssey" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    2.1k
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    12.3k
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge-trending">🔥 Trending</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Space Odyssey 2084</h3>
+                        <p class="gallery-author">by <a href="#">@cosmos_vfx</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Sci-Fi</span>
+                            <span class="tag">Space</span>
+                            <span class="tag">Epic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="fantasy">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/ec4899/ffffff?text=Dragon+Realm" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    943
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    6.7k
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Dragon Realm Chronicles</h3>
+                        <p class="gallery-author">by <a href="#">@fantasy_master</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Fantasy</span>
+                            <span class="tag">Dragons</span>
+                            <span class="tag">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="architecture">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/f59e0b/ffffff?text=Future+Cities" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    1.5k
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    9.1k
+                                </span>
+                            </div>
+                        </div>
+                        <span class="badge-featured">Featured</span>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Future Cities Skyline</h3>
+                        <p class="gallery-author">by <a href="#">@urban_vision</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Architecture</span>
+                            <span class="tag">Futuristic</span>
+                            <span class="tag">Urban</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="abstract">
+                    <div class="gallery-thumbnail">
+                        <img src="https://via.placeholder.com/600x400/3b82f6/ffffff?text=Liquid+Motion" alt="Gallery item">
+                        <div class="gallery-overlay">
+                            <button class="btn-play-large">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                                    <path d="M10 6l16 10-16 10z"/>
+                                </svg>
+                            </button>
+                            <div class="gallery-stats">
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 2l2.5 5 5.5.8-4 3.9.9 5.3-4.9-2.6-4.9 2.6.9-5.3-4-3.9 5.5-.8z"/>
+                                    </svg>
+                                    672
+                                </span>
+                                <span class="stat-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="8" cy="8" r="3"/>
+                                        <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                    </svg>
+                                    4.2k
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Liquid Motion Study</h3>
+                        <p class="gallery-author">by <a href="#">@fluid_artist</a></p>
+                        <div class="gallery-tags">
+                            <span class="tag">Abstract</span>
+                            <span class="tag">Motion</span>
+                            <span class="tag">Colorful</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="btn-primary btn-large">Load More Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#gradient2)"/>
+                            <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>DefourPro</span>
+                    </div>
+                    <p>Professional AI video generation platform for creators and businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="#">Roadmap</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="docs.html">Documentation</a>
+                    <a href="#">API</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DefourPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"19a393b54aab4d848a888fa7ccc6f857","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

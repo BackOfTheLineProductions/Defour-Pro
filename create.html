@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Video - DefourPro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>DefourPro</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 10L10 3L17 10M5 8V17H8V13H12V17H15V8"/>
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="create.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="14" height="14" rx="2"/>
+                    <path d="M10 7V13M7 10H13"/>
+                </svg>
+                <span>Create Video</span>
+            </a>
+            <a href="projects.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 7L3 17L17 17L17 7"/>
+                    <rect x="5" y="3" width="10" height="4" rx="1"/>
+                </svg>
+                <span>My Projects</span>
+            </a>
+            <a href="gallery.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                    <rect x="10" y="3" width="7" height="7" rx="1"/>
+                    <rect x="3" y="10" width="7" height="7" rx="1"/>
+                    <rect x="10" y="10" width="7" height="7" rx="1"/>
+                </svg>
+                <span>Gallery</span>
+            </a>
+            <a href="presets.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6H16M4 10H16M4 14H16"/>
+                </svg>
+                <span>Presets</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="10" cy="10" r="3"/>
+                    <path d="M10 1V4M10 16V19M19 10H16M4 10H1"/>
+                </svg>
+                <span>Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content create-layout">
+        <!-- Top Toolbar -->
+        <header class="create-toolbar">
+            <div class="toolbar-left">
+                <input type="text" class="project-name-input" value="Untitled Project" placeholder="Project name...">
+                <span class="save-indicator saved">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13.33 4L6 11.33L2.67 8"/>
+                    </svg>
+                    Saved
+                </span>
+            </div>
+            <div class="toolbar-center">
+                <div class="btn-group">
+                    <button class="btn-toolbar" title="Undo">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 7h6a4 4 0 0 1 0 8H7"/>
+                            <path d="M3 7l3-3M3 7l3 3"/>
+                        </svg>
+                    </button>
+                    <button class="btn-toolbar" title="Redo">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 7H9a4 4 0 0 0 0 8h2"/>
+                            <path d="M15 7l-3-3M15 7l-3 3"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn-toolbar" title="Import Settings">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 11v3.33A1.67 1.67 0 0 1 13.33 16H4.67A1.67 1.67 0 0 1 3 14.33V11"/>
+                            <path d="M12.33 6.33L9 3 5.67 6.33"/>
+                            <path d="M9 3v8"/>
+                        </svg>
+                    </button>
+                    <button class="btn-toolbar" title="Export Settings">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 11v3.33A1.67 1.67 0 0 1 13.33 16H4.67A1.67 1.67 0 0 1 3 14.33V11"/>
+                            <path d="M5.67 7.67L9 11l3.33-3.33"/>
+                            <path d="M9 11V3"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="toolbar-right">
+                <button class="btn-secondary">Save Draft</button>
+                <button class="btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                        <path d="M6 4v10l8-5z"/>
+                    </svg>
+                    Render Video
+                </button>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <div class="create-content">
+            <!-- Left Panel - Parameters -->
+            <aside class="parameters-panel">
+                <div class="panel-header">
+                    <h3>Parameters</h3>
+                    <button class="btn-icon-sm" title="Load Preset">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13.33 2H2.67C1.75 2 1 2.75 1 3.67v8.67C1 13.25 1.75 14 2.67 14h10.67c.91 0 1.67-.75 1.67-1.67V3.67C15 2.75 14.25 2 13.33 2z"/>
+                            <path d="M5 7h6M5 10h4"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab active" data-tab="prompts">Prompts</button>
+                    <button class="tab" data-tab="animation">Animation</button>
+                    <button class="tab" data-tab="camera">Camera</button>
+                    <button class="tab" data-tab="output">Output</button>
+                </div>
+
+                <div class="tab-content" id="prompts-tab">
+                    <div class="param-section">
+                        <label class="param-label">
+                            Positive Prompt
+                            <span class="tooltip-icon" title="Describe what you want to see">?</span>
+                        </label>
+                        <textarea class="param-textarea" rows="4" placeholder="A beautiful cyberpunk city at night, neon lights, flying cars, detailed architecture..."></textarea>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Negative Prompt
+                            <span class="tooltip-icon" title="Describe what you don't want">?</span>
+                        </label>
+                        <textarea class="param-textarea" rows="3" placeholder="blur, distorted, low quality, artifacts..."></textarea>
+                    </div>
+
+                    <div class="param-row">
+                        <div class="param-section">
+                            <label class="param-label">Seed</label>
+                            <input type="number" class="param-input" value="-1" placeholder="-1">
+                        </div>
+                        <div class="param-section">
+                            <label class="param-label">Steps</label>
+                            <input type="number" class="param-input" value="50" min="1" max="150">
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            CFG Scale
+                            <span class="param-value">7.5</span>
+                        </label>
+                        <input type="range" class="param-slider" min="1" max="30" step="0.1" value="7.5">
+                        <div class="slider-labels">
+                            <span>1</span>
+                            <span>30</span>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Sampler</label>
+                        <select class="param-select">
+                            <option>Euler a</option>
+                            <option>Euler</option>
+                            <option>DPM++ 2M Karras</option>
+                            <option>DPM++ SDE Karras</option>
+                            <option>DDIM</option>
+                            <option>PLMS</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Model</label>
+                        <select class="param-select">
+                            <option>Stable Diffusion v1.5</option>
+                            <option>Stable Diffusion v2.1</option>
+                            <option>SDXL 1.0</option>
+                            <option>Realistic Vision v5.1</option>
+                            <option>DreamShaper 8</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="animation-tab">
+                    <div class="param-section">
+                        <label class="param-label">Animation Mode</label>
+                        <select class="param-select">
+                            <option>2D</option>
+                            <option>3D</option>
+                            <option>Video Input</option>
+                            <option>Interpolation</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Max Frames
+                            <span class="param-value">120</span>
+                        </label>
+                        <input type="range" class="param-slider" min="10" max="500" step="1" value="120">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Strength Schedule
+                            <span class="tooltip-icon" title="How much to change each frame">?</span>
+                        </label>
+                        <input type="text" class="param-input" value="0:(0.65)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Cadence
+                            <span class="param-value">1</span>
+                        </label>
+                        <input type="range" class="param-slider" min="1" max="10" step="1" value="1">
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="interpolate" checked>
+                            <label for="interpolate">Enable Frame Interpolation</label>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="color-coherence">
+                            <label for="color-coherence">Color Coherence</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="camera-tab">
+                    <div class="param-section">
+                        <label class="param-label">Translation X</label>
+                        <input type="text" class="param-input" value="0:(0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Translation Y</label>
+                        <input type="text" class="param-input" value="0:(0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Translation Z</label>
+                        <input type="text" class="param-input" value="0:(2)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Rotation X</label>
+                        <input type="text" class="param-input" value="0:(0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Rotation Y</label>
+                        <input type="text" class="param-input" value="0:(0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Rotation Z</label>
+                        <input type="text" class="param-input" value="0:(0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Zoom</label>
+                        <input type="text" class="param-input" value="0:(1.0)" placeholder="frame:(value)">
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            FOV
+                            <span class="param-value">90</span>
+                        </label>
+                        <input type="range" class="param-slider" min="40" max="120" step="1" value="90">
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="motion-blur">
+                            <label for="motion-blur">Motion Blur</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content hidden" id="output-tab">
+                    <div class="param-row">
+                        <div class="param-section">
+                            <label class="param-label">Width</label>
+                            <input type="number" class="param-input" value="512" step="64">
+                        </div>
+                        <div class="param-section">
+                            <label class="param-label">Height</label>
+                            <input type="number" class="param-input" value="512" step="64">
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">FPS</label>
+                        <select class="param-select">
+                            <option>24</option>
+                            <option>30</option>
+                            <option>60</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Output Format</label>
+                        <select class="param-select">
+                            <option>MP4 (H.264)</option>
+                            <option>MP4 (H.265)</option>
+                            <option>WebM</option>
+                            <option>GIF</option>
+                            <option>Image Sequence</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Quality
+                            <span class="param-value">High</span>
+                        </label>
+                        <select class="param-select">
+                            <option>Draft</option>
+                            <option selected>High</option>
+                            <option>Maximum</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="save-frames">
+                            <label for="save-frames">Save Individual Frames</label>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="upscale" checked>
+                            <label for="upscale">Upscale Output (2x)</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Center - Preview & Timeline -->
+            <div class="center-panel">
+                <!-- Preview -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <h3>Preview</h3>
+                        <div class="preview-controls">
+                            <button class="btn-icon-sm" title="Enable Live Preview">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="8" cy="8" r="3"/>
+                                    <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Fullscreen">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 1h5v5M6 15H1v-5M15 1l-6 6M1 15l6-6"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preview-canvas">
+                        <div class="preview-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="4" width="56" height="56" rx="4"/>
+                                <path d="M4 20h56M20 4v56"/>
+                            </svg>
+                            <p>Preview will appear here</p>
+                            <button class="btn-primary">Generate Preview Frame</button>
+                        </div>
+                    </div>
+                    <div class="preview-info">
+                        <span>Frame: <strong>1 / 120</strong></span>
+                        <span>Time: <strong>0.00s / 5.00s</strong></span>
+                        <span>Resolution: <strong>512x512</strong></span>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="timeline-panel">
+                    <div class="timeline-header">
+                        <h3>Keyframe Timeline</h3>
+                        <div class="timeline-controls">
+                            <button class="btn-icon-sm active" title="Prompt Keyframes">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M2 3h12v2H2zM2 7h12v2H2zM2 11h8v2H2z"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Camera Keyframes">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 5l4-2 4 2 4-2v8l-4 2-4-2-4 2z"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Parameter Keyframes">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="8" cy="8" r="2"/>
+                                    <path d="M8 1v3M8 12v3M15 8h-3M4 8H1"/>
+                                </svg>
+                            </button>
+                            <div class="divider"></div>
+                            <button class="btn-primary btn-sm">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 3v8M3 7h8"/>
+                                </svg>
+                                Add Keyframe
+                            </button>
+                        </div>
+                    </div>
+                    <div class="timeline-canvas">
+                        <div class="timeline-ruler">
+                            <div class="ruler-marker" style="left: 0%">0</div>
+                            <div class="ruler-marker" style="left: 25%">30</div>
+                            <div class="ruler-marker" style="left: 50%">60</div>
+                            <div class="ruler-marker" style="left: 75%">90</div>
+                            <div class="ruler-marker" style="left: 100%">120</div>
+                        </div>
+                        <div class="timeline-tracks">
+                            <div class="timeline-track">
+                                <div class="track-label">Prompts</div>
+                                <div class="track-content">
+                                    <div class="keyframe" style="left: 0%" data-frame="0">
+                                        <div class="keyframe-marker"></div>
+                                        <div class="keyframe-tooltip">Frame 0: Starting prompt</div>
+                                    </div>
+                                    <div class="keyframe" style="left: 50%" data-frame="60">
+                                        <div class="keyframe-marker"></div>
+                                        <div class="keyframe-tooltip">Frame 60: Mid transition</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-track">
+                                <div class="track-label">Camera</div>
+                                <div class="track-content">
+                                    <div class="keyframe camera" style="left: 0%" data-frame="0">
+                                        <div class="keyframe-marker"></div>
+                                    </div>
+                                    <div class="keyframe camera" style="left: 33%" data-frame="40">
+                                        <div class="keyframe-marker"></div>
+                                    </div>
+                                    <div class="keyframe camera" style="left: 66%" data-frame="80">
+                                        <div class="keyframe-marker"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-track">
+                                <div class="track-label">Strength</div>
+                                <div class="track-content">
+                                    <div class="keyframe param" style="left: 0%" data-frame="0">
+                                        <div class="keyframe-marker"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playhead" style="left: 0%"></div>
+                    </div>
+                    <div class="timeline-controls-bottom">
+                        <button class="btn-icon-sm" title="Play/Pause">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M4 2l10 6-10 6z"/>
+                            </svg>
+                        </button>
+                        <button class="btn-icon-sm" title="Previous Frame">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M10 2L4 8l6 6z"/>
+                            </svg>
+                        </button>
+                        <button class="btn-icon-sm" title="Next Frame">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M6 2l6 6-6 6z"/>
+                            </svg>
+                        </button>
+                        <div class="zoom-controls">
+                            <button class="btn-icon-sm" title="Zoom Out">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="7" cy="7" r="5"/>
+                                    <path d="M11 11l3 3M5 7h4"/>
+                                </svg>
+                            </button>
+                            <span class="zoom-level">100%</span>
+                            <button class="btn-icon-sm" title="Zoom In">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="7" cy="7" r="5"/>
+                                    <path d="M11 11l3 3M7 5v4M5 7h4"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Advanced Features -->
+            <aside class="advanced-panel">
+                <div class="panel-header">
+                    <h3>Advanced</h3>
+                </div>
+
+                <div class="advanced-tabs">
+                    <button class="advanced-tab active" data-tab="audio">Audio Sync</button>
+                    <button class="advanced-tab" data-tab="controlnet">ControlNet</button>
+                    <button class="advanced-tab" data-tab="lora">LoRA</button>
+                </div>
+
+                <div class="advanced-content" id="audio-content">
+                    <div class="param-section">
+                        <label class="param-label">Audio File</label>
+                        <div class="file-upload">
+                            <input type="file" id="audio-file" accept="audio/*" hidden>
+                            <button class="btn-upload" onclick="document.getElementById('audio-file').click()">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 13v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7 7 10 4 13 7"/>
+                                    <line x1="10" y1="4" x2="10" y2="13"/>
+                                </svg>
+                                Upload Audio
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="beat-sync">
+                            <label for="beat-sync">Sync to Beats</label>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Frequency Band</label>
+                        <select class="param-select">
+                            <option>All Frequencies</option>
+                            <option>Bass (20-250 Hz)</option>
+                            <option>Mid (250-4000 Hz)</option>
+                            <option>High (4000+ Hz)</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Sensitivity
+                            <span class="param-value">50%</span>
+                        </label>
+                        <input type="range" class="param-slider" min="0" max="100" step="1" value="50">
+                    </div>
+                </div>
+
+                <div class="advanced-content hidden" id="controlnet-content">
+                    <div class="param-section">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="enable-controlnet">
+                            <label for="enable-controlnet">Enable ControlNet</label>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Model</label>
+                        <select class="param-select">
+                            <option>Canny Edge</option>
+                            <option>Depth Map</option>
+                            <option>OpenPose</option>
+                            <option>Scribble</option>
+                            <option>Segmentation</option>
+                        </select>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">Reference Image</label>
+                        <div class="file-upload">
+                            <input type="file" id="controlnet-image" accept="image/*" hidden>
+                            <button class="btn-upload" onclick="document.getElementById('controlnet-image').click()">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="14" height="14" rx="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <path d="M14 14l-3-3-4 4"/>
+                                </svg>
+                                Upload Image
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="param-section">
+                        <label class="param-label">
+                            Weight
+                            <span class="param-value">1.0</span>
+                        </label>
+                        <input type="range" class="param-slider" min="0" max="2" step="0.1" value="1.0">
+                    </div>
+                </div>
+
+                <div class="advanced-content hidden" id="lora-content">
+                    <div class="param-section">
+                        <label class="param-label">LoRA Models</label>
+                        <div class="lora-list">
+                            <div class="lora-item">
+                                <select class="param-select">
+                                    <option value="">Select LoRA...</option>
+                                    <option>Detail Tweaker</option>
+                                    <option>LCM LoRA</option>
+                                    <option>Film Grain</option>
+                                    <option>Anime Style</option>
+                                </select>
+                                <input type="number" class="param-input-sm" value="0.7" min="0" max="2" step="0.1" placeholder="Weight">
+                                <button class="btn-icon-sm btn-danger">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M11 3L3 11M3 3l8 8"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn-secondary btn-sm btn-full">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 2v10M2 7h10"/>
+                            </svg>
+                            Add LoRA
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quick-actions-panel">
+                    <h4>Quick Actions</h4>
+                    <button class="quick-action-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="9" r="7"/>
+                            <path d="M9 5v4l3 2"/>
+                        </svg>
+                        Test Render (Low-res)
+                    </button>
+                    <button class="quick-action-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 7H9a4 4 0 0 0 0 8h2"/>
+                        </svg>
+                        Reset All Settings
+                    </button>
+                    <button class="quick-action-btn">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="6" r="3"/>
+                            <path d="M3 18v-2a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v2"/>
+                        </svg>
+                        Share Project
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="js/create.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"19a393b54aab4d848a888fa7ccc6f857","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

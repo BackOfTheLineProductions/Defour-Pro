@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DefourPro</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" style="stop-color:#6366f1"/>
+                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>DefourPro</span>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 10L10 3L17 10M5 8V17H8V13H12V17H15V8"/>
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="create.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="14" height="14" rx="2"/>
+                    <path d="M10 7V13M7 10H13"/>
+                </svg>
+                <span>Create Video</span>
+            </a>
+            <a href="projects.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 7L3 17L17 17L17 7"/>
+                    <rect x="5" y="3" width="10" height="4" rx="1"/>
+                </svg>
+                <span>My Projects</span>
+            </a>
+            <a href="gallery.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                    <rect x="10" y="3" width="7" height="7" rx="1"/>
+                    <rect x="3" y="10" width="7" height="7" rx="1"/>
+                    <rect x="10" y="10" width="7" height="7" rx="1"/>
+                </svg>
+                <span>Gallery</span>
+            </a>
+            <a href="presets.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 6H16M4 10H16M4 14H16"/>
+                    <circle cx="7" cy="6" r="1" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                    <circle cx="13" cy="14" r="1" fill="currentColor"/>
+                </svg>
+                <span>Presets</span>
+            </a>
+            <a href="render-queue.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="10" cy="10" r="7"/>
+                    <path d="M10 6V10L13 13"/>
+                </svg>
+                <span>Render Queue</span>
+                <span class="badge-count">3</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="settings.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="10" cy="10" r="3"/>
+                    <path d="M10 1V4M10 16V19M19 10H16M4 10H1M16.24 16.24L14.12 14.12M5.88 5.88L3.76 3.76M16.24 3.76L14.12 5.88M5.88 14.12L3.76 16.24"/>
+                </svg>
+                <span>Settings</span>
+            </a>
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+                <div class="user-info">
+                    <div class="user-name">John Doe</div>
+                    <div class="user-plan">Pro Plan</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <h1>Dashboard</h1>
+                <p class="subtitle">Welcome back! Ready to create amazing videos?</p>
+            </div>
+            <div class="top-bar-right">
+                <button class="btn-icon" title="Notifications">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 7C15 5.67392 14.4732 4.40215 13.5355 3.46447C12.5979 2.52678 11.3261 2 10 2C8.67392 2 7.40215 2.52678 6.46447 3.46447C5.52678 4.40215 5 5.67392 5 7C5 13 2 15 2 15H18C18 15 15 13 15 7Z"/>
+                        <path d="M11.73 18C11.5542 18.3031 11.3019 18.5547 10.9982 18.7295C10.6946 18.9044 10.3504 18.9965 10 18.9965C9.64964 18.9965 9.30541 18.9044 9.00179 18.7295C8.69818 18.5547 8.44583 18.3031 8.27 18"/>
+                    </svg>
+                    <span class="notification-dot"></span>
+                </button>
+                <button class="btn-icon" title="Help">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="10" cy="10" r="8"/>
+                        <path d="M7.5 7.5C7.5 6.5 8.5 5.5 10 5.5C11.5 5.5 12.5 6.5 12.5 7.5C12.5 8.5 11.5 9 10 9.5V11"/>
+                        <circle cx="10" cy="14" r="0.5" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Quick Stats -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-label">Videos Created</div>
+                    <div class="stat-value">247</div>
+                    <div class="stat-change positive">+12% this month</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-label">Rendering Time</div>
+                    <div class="stat-value">42.5h</div>
+                    <div class="stat-change neutral">saved this month</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-label">Storage Used</div>
+                    <div class="stat-value">24.8 GB</div>
+                    <div class="stat-change neutral">of 100 GB</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-label">Shared Projects</div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-change positive">3 collaborators</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-cards">
+                <a href="create.html" class="action-card">
+                    <div class="action-icon" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14"/>
+                        </svg>
+                    </div>
+                    <h3>New Project</h3>
+                    <p>Start creating a new AI video from scratch</p>
+                </a>
+
+                <a href="presets.html" class="action-card">
+                    <div class="action-icon" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </div>
+                    <h3>Browse Presets</h3>
+                    <p>Explore community presets and templates</p>
+                </a>
+
+                <a href="import.html" class="action-card">
+                    <div class="action-icon" style="background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Import Project</h3>
+                    <p>Import settings from Deforum or JSON</p>
+                </a>
+
+                <a href="learn.html" class="action-card">
+                    <div class="action-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Learn & Tutorials</h3>
+                    <p>Master DefourPro with video tutorials</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Projects -->
+        <section class="recent-projects">
+            <div class="section-header-row">
+                <h2>Recent Projects</h2>
+                <a href="projects.html" class="btn-secondary">View All</a>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/6366f1/ffffff?text=Cyberpunk+City" alt="Project thumbnail">
+                        <div class="project-overlay">
+                            <button class="btn-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="project-status rendering">Rendering</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cyberpunk City Tour</h3>
+                        <p class="project-meta">
+                            <span>1080p</span>
+                            <span>•</span>
+                            <span>15s</span>
+                            <span>•</span>
+                            <span>2 hours ago</span>
+                        </p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span class="progress-text">65%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/8b5cf6/ffffff?text=Abstract+Flow" alt="Project thumbnail">
+                        <div class="project-overlay">
+                            <button class="btn-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Abstract Flow Animation</h3>
+                        <p class="project-meta">
+                            <span>720p</span>
+                            <span>•</span>
+                            <span>30s</span>
+                            <span>•</span>
+                            <span>1 day ago</span>
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn-icon-sm" title="Download">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 10v2.67A1.33 1.33 0 0 1 12.67 14H3.33A1.33 1.33 0 0 1 2 12.67V10"/>
+                                    <path d="M4.67 6.67L8 10l3.33-3.33"/>
+                                    <path d="M8 10V2"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Share">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="4" r="2"/>
+                                    <circle cx="4" cy="8" r="2"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                    <path d="M5.73 9.27l4.54 2.46M10.27 5.27l-4.54 2.46"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Edit">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M11.33 2a1.88 1.88 0 0 1 2.67 2.67l-8.67 8.66L2 14l.67-3.33L11.33 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-thumbnail">
+                        <img src="https://via.placeholder.com/400x225/ec4899/ffffff?text=Nature+Journey" alt="Project thumbnail">
+                        <div class="project-overlay">
+                            <button class="btn-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="project-status completed">Completed</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Nature Journey</h3>
+                        <p class="project-meta">
+                            <span>4K</span>
+                            <span>•</span>
+                            <span>45s</span>
+                            <span>•</span>
+                            <span>3 days ago</span>
+                        </p>
+                        <div class="project-actions">
+                            <button class="btn-icon-sm" title="Download">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 10v2.67A1.33 1.33 0 0 1 12.67 14H3.33A1.33 1.33 0 0 1 2 12.67V10"/>
+                                    <path d="M4.67 6.67L8 10l3.33-3.33"/>
+                                    <path d="M8 10V2"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Share">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="4" r="2"/>
+                                    <circle cx="4" cy="8" r="2"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                    <path d="M5.73 9.27l4.54 2.46M10.27 5.27l-4.54 2.46"/>
+                                </svg>
+                            </button>
+                            <button class="btn-icon-sm" title="Edit">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M11.33 2a1.88 1.88 0 0 1 2.67 2.67l-8.67 8.66L2 14l.67-3.33L11.33 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Showcase -->
+        <section class="community-showcase">
+            <div class="section-header-row">
+                <h2>Community Showcase</h2>
+                <a href="gallery.html" class="btn-secondary">Explore Gallery</a>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <img src="https://via.placeholder.com/300x300/10b981/ffffff?text=Featured+1" alt="Community work">
+                    <div class="showcase-overlay">
+                        <div class="showcase-info">
+                            <h4>Cosmic Dreams</h4>
+                            <p>by @artist_name</p>
+                        </div>
+                        <button class="btn-icon-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 3.33v13.34M3.33 10h13.34"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://via.placeholder.com/300x300/f59e0b/ffffff?text=Featured+2" alt="Community work">
+                    <div class="showcase-overlay">
+                        <div class="showcase-info">
+                            <h4>Digital Waves</h4>
+                            <p>by @creator_pro</p>
+                        </div>
+                        <button class="btn-icon-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 3.33v13.34M3.33 10h13.34"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://via.placeholder.com/300x300/3b82f6/ffffff?text=Featured+3" alt="Community work">
+                    <div class="showcase-overlay">
+                        <div class="showcase-info">
+                            <h4>Urban Pulse</h4>
+                            <p>by @designer_x</p>
+                        </div>
+                        <button class="btn-icon-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 3.33v13.34M3.33 10h13.34"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <img src="https://via.placeholder.com/300x300/ef4444/ffffff?text=Featured+4" alt="Community work">
+                    <div class="showcase-overlay">
+                        <div class="showcase-info">
+                            <h4>Neon Nights</h4>
+                            <p>by @vfx_master</p>
+                        </div>
+                        <button class="btn-icon-white">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 3.33v13.34M3.33 10h13.34"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"19a393b54aab4d848a888fa7ccc6f857","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

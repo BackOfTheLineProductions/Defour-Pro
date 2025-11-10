@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DefourPro - AI Video Generation Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                        <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" style="stop-color:#6366f1"/>
+                                <stop offset="100%" style="stop-color:#8b5cf6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>DefourPro</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="docs.html">Docs</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="login.html" class="btn-secondary">Log In</a>
+                    <a href="dashboard.html" class="btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge">🚀 Now with Real-time Preview & Advanced Controls</span>
+                </div>
+                <h1 class="hero-title">
+                    Create Stunning AI Videos<br/>
+                    <span class="gradient-text">With Unmatched Control</span>
+                </h1>
+                <p class="hero-description">
+                    Professional AI video generation platform built on Stable Diffusion Deforum.
+                    Advanced keyframe control, real-time preview, batch processing, and more features
+                    not available in traditional Deforum interfaces.
+                </p>
+                <div class="hero-actions">
+                    <a href="dashboard.html" class="btn-primary btn-large">
+                        Start Creating Free
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 4L13 10L7 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#demo" class="btn-secondary btn-large">
+                        Watch Demo
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M6.5 5.5L14.5 10L6.5 14.5V5.5Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">50K+</div>
+                        <div class="stat-label">Videos Created</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">15K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">4.9/5</div>
+                        <div class="stat-label">User Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose DefourPro?</h2>
+                <p>Features that go beyond traditional Deforum interfaces</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Visual Keyframe Editor</h3>
+                    <p>Drag-and-drop timeline interface with visual keyframe editing. No more manual JSON editing!</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Preview</h3>
+                    <p>See your video frames generate in real-time with low-res preview mode for instant feedback.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Batch Processing</h3>
+                    <p>Queue multiple video generations with different settings. Run variations automatically.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #eab308 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Preset Library</h3>
+                    <p>Save and share complete animation presets. Build on the community's best work.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Camera Controls</h3>
+                    <p>3D camera movements with path preview, motion blur, depth of field, and zoom effects.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Audio Reactivity</h3>
+                    <p>Sync animation parameters to audio beats and frequencies. Perfect for music videos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                    </div>
+                    <h3>Cloud Rendering</h3>
+                    <p>Render on powerful cloud GPUs. No expensive hardware required. Pay only for what you use.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Collaboration Tools</h3>
+                    <p>Share projects with team members. Version control for animation settings. Comments and feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>DefourPro vs Traditional Deforum</h2>
+                <p>See what makes us different</p>
+            </div>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="feature-col">Feature</div>
+                    <div class="traditional-col">Traditional Deforum</div>
+                    <div class="defourpro-col">DefourPro</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Keyframe Editing</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Manual JSON editing
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Visual timeline editor
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Real-time Preview</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Full render only
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Live low-res preview
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Batch Processing</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> One at a time
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Queue unlimited jobs
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Preset Management</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Copy/paste settings
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Save, share, browse library
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Audio Sync</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Not available
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Beat detection & sync
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Cloud Rendering</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Local GPU only
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Scalable cloud GPUs
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Collaboration</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Not available
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Teams & sharing
+                    </div>
+                </div>
+                <div class="comparison-row">
+                    <div class="feature-col">Version Control</div>
+                    <div class="traditional-col">
+                        <span class="icon-no">✗</span> Manual backups
+                    </div>
+                    <div class="defourpro-col">
+                        <span class="icon-yes">✓</span> Automatic versioning
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Create Amazing Videos?</h2>
+                <p>Join thousands of creators using DefourPro to bring their visions to life</p>
+                <div class="cta-actions">
+                    <a href="dashboard.html" class="btn-primary btn-large">Start Free Trial</a>
+                    <a href="pricing.html" class="btn-secondary btn-large">View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#gradient2)"/>
+                            <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient2" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" style="stop-color:#6366f1"/>
+                                    <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>DefourPro</span>
+                    </div>
+                    <p>Professional AI video generation platform for creators and businesses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="#">Roadmap</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="docs.html">Documentation</a>
+                    <a href="#">API</a>
+                    <a href="#">Tutorials</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DefourPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"19a393b54aab4d848a888fa7ccc6f857","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
